@@ -1,0 +1,165 @@
+<body></body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>BEAM Applications</title>
+        <link href="./css/styles.css" rel="stylesheet">
+        <link href="./css/fonts.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="error"></div><br>
+        <!-- <div id="generate">CLICK FOR GENERATE</div> -->
+        <div class="container " id="vote-list">
+            <div class="vote" id="v1">
+                <div class="vote__title" id="vote1"></div>
+            </div>
+            <div class="vote" id="v2">
+                <div class="vote__title" id="vote2"></div>
+            </div>
+            <div class="vote" id="v3">
+                <div class="vote__title" id="vote3"></div>
+            </div>
+            <div class="vote" id="v4">
+                <div class="vote__title" id="vote4"></div>
+            </div>
+            <div class="vote" id="v5">
+                <div class="vote__title" id="vote5"></div>
+            </div>
+            <div class="vote" id="v6">
+                <div class="vote__title" id="vote6"></div>
+            </div>
+            <div class="vote" id="v7">
+                <div class="vote__title" id="vote7"></div>
+            </div>
+            <div class="vote" id="v8">
+                <div class="vote__title" id="vote8"></div>
+            </div>
+        </div>
+
+        <div class="container hidden" id="voting">
+            <div class="back ui-button" id="back">BACK TO PROPOSALS</div>
+            <div class="container__main">
+                <div class="container__main__header">
+                    <span id="vote-for"></span>
+                </div> 
+
+                <div class="container__main__content hidden" id="voting-main">
+                    <div class="container__main__content__yes">
+                        <img class="container__main__content__yes__icon" src="./icons/positive-vote.svg"/>
+                        <button class="container__main__content__yes__button ui-button" id="yes-button">
+                            <span class="ui-button__inner-wrapper">
+                                <div class="ui-button__icon">
+                                    <img src="./icons/icon-yes.svg"/>
+                                </div>
+                                <span class="ui-button__text">YES</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="container__main__content__separator"></div>
+                    <div class="container__main__content__no">
+                        <img class="container__main__content__no__icon" src="./icons/negative-vote.svg"/>
+                        <button class="container__main__content__no__button ui-button" id="no-button">
+                            <span class="ui-button__inner-wrapper">
+                                <div class="ui-button__icon">
+                                    <img src="./icons/icon-no.svg"/>
+                                </div>
+                                <span class="ui-button__text">NO</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="container__main__content hidden" id="voted-positive">
+                    <div class="container__main__content__positive">
+                        <img class="container__main__content__positive__icon" src="./icons/yes-result.svg"/>
+                        <div class="container__main__content__positive__text">You voted YES!</div>
+                    </div>
+                </div>
+
+                <div class="container__main__content hidden" id="voted-negative">
+                    <div class="container__main__content__negative">
+                        <img class="container__main__content__negative__icon" src="./icons/no-result.svg"/>
+                        <div class="container__main__content__negative__text">You voted NO!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__results hidden" id="voting-results">
+                <div class="container__results__header">
+                    <span class="container__results__header__text">RESULTS</span>
+                </div>
+                <div class="container__results__content">
+                    <div class="flex-box">
+                        <div class="container__results__content__yes-results">
+                            <div class="yes-results__title">YES</div>
+                            <div class="yes-results__progress">
+                                <div class="yes-results__progress__value" id="positive-value"></div>
+                            </div>
+                            <div class="yes-results__percentage" id="positive-percentage"></div>
+                            <div class="yes-results__votes" id="positive-votes"></div>
+                        </div>
+                        <div class="container__results__content__no-results">
+                            <div class="no-results__title">NO</div>
+                            <div class="no-results__progress">
+                                <div class="no-results__progress__value" id="negative-value"></div>
+                            </div>
+                            <div class="no-results__percentage" id="negative-percentage"></div>
+                            <div class="no-results__votes" id="negative-votes"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- <div class="container" id="dao-core">
+                <div class="container__main" id="dao-core-main">
+                    <div class="container__main__issued">
+                        <span class="container__main__issued__header">TOTAL ISSUED BEAMX TOKENS</span>
+                        <div class="container__main__issued__value" id="issued"></div>
+                    </div>
+                    <div class="container__main__separator"></div>
+                    <div class="container__main__distributed">
+                        <span class="container__main__distributed__header">DISTRIBUTED BEAMX TOKENS</span>
+                        <div class="container__main__distributed__value" id="distributed"></div>
+                    </div>
+                </div> -->
+            
+
+            <!-- <div class="container__update">
+                <div class="container__update__contract" id="cid"></div>
+            </div> -->
+        </div>
+        <div class="hidden" id="deposit-popup">
+            <div class="popup">
+                <div class="popup__content">
+                    <div class="popup__content__title">Deposit</div>
+                    <div class="popup__content__middle-deposit">
+                       <input type="text" class="deposit-popup-input" value="5" id="deposit-input"/>
+                       <span class="deposit-popup-beam">demoX</span>
+                    </div>
+                    <div class="popup__content__controls">
+                        <button class="container__main__controls__cancel ui-button" id="cancel-button-popup-dep">
+                            <span class="ui-button__inner-wrapper">
+                                <div class="ui-button__icon">
+                                    <img src="./icons/icon-cancel.svg"/>
+                                </div>
+                                <span class="ui-button__text cancel-text">cancel</span>
+                            </span>
+                        </button>
+                        <button class="popup__content__controls__deposit ui-button" id="deposit-button-popup">
+                            <span class="ui-button__inner-wrapper">
+                                <div class="ui-button__icon">
+                                    <img src="./icons/icon-receive-blue.svg"/>
+                                </div>
+                                <span class="ui-button__text">deposit</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src='./scripts/big.js'></script>
+    <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js" async></script>
+    <script type="module" async src="./scripts/index.js"></script>
+</html>
+</body>
