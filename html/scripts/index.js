@@ -287,6 +287,7 @@ Utils.onLoad(async (beamAPI) => {
             if (!faucet.pluginData.voteClicked) {
                 Utils.callApi("proposal_vote", "invoke_contract", {
                     contract: faucet.pluginData.bytes,
+                    create_tx: false,
                     args: ["role=my_account,action=proposal_vote,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+faucet.pluginData.selectedPROP.pid+",amount="+value+",variant=0"].join("")
                 })
                 faucet.showPositiveVoted();
@@ -300,6 +301,7 @@ Utils.onLoad(async (beamAPI) => {
             if (!faucet.pluginData.voteClicked) {
                 Utils.callApi("proposal_vote", "invoke_contract", {
                     contract: faucet.pluginData.bytes,
+                    create_tx: false,
                     args: ["role=my_account,action=proposal_vote,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+faucet.pluginData.selectedPROP.pid+",amount="+value+",variant=1"].join("")
                 })
                 faucet.showNegativeVoted();
@@ -327,6 +329,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[0];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[0].pid].join("")
         })
     });
@@ -336,6 +339,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[1];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[1].pid].join("")
         })
     });
@@ -344,6 +348,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[2];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[2].pid].join("")
         })
     });
@@ -352,6 +357,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[3];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[3].pid].join("")
         })
     });
@@ -360,6 +366,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[4];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[4].pid].join("")
         })
     });
@@ -368,6 +375,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[5];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[5].pid].join("")
         })
     });
@@ -376,6 +384,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[6];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[6].pid].join("")
         })
     });
@@ -384,6 +393,7 @@ Utils.onLoad(async (beamAPI) => {
         faucet.pluginData.selectedPROP = PROPOSALS[7];
         Utils.callApi("proposal_view", "invoke_contract", {
             contract: faucet.pluginData.bytes,
+            create_tx: false,
             args: ["role=manager,action=proposal_view,cid=f51d60d209cae23ab4398a6788d1526b347b329cb18630c099162a685606ef91,pid="+PROPOSALS[7].pid].join("")
         })
     });
