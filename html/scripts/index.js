@@ -67,7 +67,7 @@ class Faucet {
     }
 
     setError = (errmsg) => {
-        Utils.hide('faucet')
+        Utils.hide('voting')
         Utils.setText('error', errmsg)
         if (this.timeout) {
             clearTimeout(this.timeout)   
